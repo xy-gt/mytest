@@ -4,7 +4,7 @@ public class TestThread {
 
 	public static void main(String[] args) throws InterruptedException {
 
-		System.out.println("��ʼ");
+		System.out.println("start�ʼ");
 		
 		T t = new T();
 		T2 t2 = new T2();
@@ -16,9 +16,10 @@ public class TestThread {
 		//t2.start();
 		t3.start();
 		t3.setPriority(2);
+	    
 		
 		Thread.sleep(10000);
-		System.out.println("���߳̽���");
+		System.out.println("end");
 	}
 
 }

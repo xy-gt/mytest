@@ -37,6 +37,13 @@ public class TestDate {
 		 *  2017-12-21T08:00:00:00Z
 		 *  2019-05-23T14:31:05:00Z
 		 */
+		
+		 SimpleDateFormat f1 = new SimpleDateFormat("yyyyMMddHHmmss");
+		 SimpleDateFormat f2 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		 System.out.println(f2.format(f1.parse("20170120185435")));
+		
+		
+		
 	}
 
 }
