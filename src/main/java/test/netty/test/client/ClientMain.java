@@ -14,6 +14,7 @@ import io.netty.util.CharsetUtil;
 import test.netty.test.idle.ClientHandler2;
 
 import java.net.InetSocketAddress;
+import java.util.Scanner;
 
 public class ClientMain {
     private final String host;
@@ -55,9 +56,14 @@ public class ClientMain {
             // 连接完成
             System.out.println("connected...");
 
-            for (int i = 0; i < 10 ; i++) {
-                cf.channel().write(Unpooled.copiedBuffer("333333333", CharsetUtil.UTF_8));
-                Thread.sleep(3000);
+            Scanner scanner = new Scanner(System.in);
+            while (true) {
+                System.out.println("请输入：");
+                String string = scanner.next();
+                if ("exit".equals(string)) {
+                    break;
+                }
+                cf.channel().write(Unpooled.copiedBuffer(string, CharsetUtil.UTF_8));
                 cf.channel().flush();
             }
 

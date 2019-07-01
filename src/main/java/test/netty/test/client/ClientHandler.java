@@ -16,11 +16,6 @@ public class ClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
         System.out.println("client channelActive..");
        // super.channelActive(ctx);
         // 必须存在flush
-    while (true) {
-        ctx.write(Unpooled.copiedBuffer("333333333", CharsetUtil.UTF_8));
-        Thread.sleep(3000);
-        ctx.flush();
-    }
     }
 
     @Override
