@@ -20,7 +20,7 @@ public class Test1 {
 		List  slist1 = list.stream().sorted(Comparator.comparing((User u)-> u.getName()).reversed().thenComparing(User::getAge)).collect(Collectors.toList());
 		System.out.println("排序输出："+slist1);
 		
-		System.err.println("--------Listתmap---------------------");
+		System.err.println("--------List map---------------------");
 		Map<String, User2> map2 = list.stream().map(User2::new).collect(Collectors.toMap(User2::getId, Function.identity()));
 		List list2 = list.stream().map(User2::new).collect(Collectors.toList());
 		System.out.println("map2:"+map2);
@@ -33,12 +33,12 @@ public class Test1 {
 		
 		System.err.println("------------------filter-------------------");
 		Long c1 = list.stream().filter((p)-> p.getAge() > 100).count();
-		System.err.println(c1);
+		System.out.println(c1);
 		
 		System.err.println("---------------平均值-----------------------------");
 	 	Double age = list.stream()
 		      .collect(Collectors.averagingDouble(User::getAge));
-	    System.err.println(age);
+	    System.out.println(age);
 	 	
 	 	
 	    System.err.println("----------------------过滤和排序-----------------------------------");
@@ -47,7 +47,7 @@ public class Test1 {
 	    		.sorted((s1,s2) -> {
 	    	return s1.getAge().compareTo(s2.getAge());
 	    }).collect(Collectors.toList());
-	    System.err.println("过滤和排序"+slist);
+	    System.out.println("过滤和排序"+slist);
 	    
 	 /*	list.stream()
 	   .filter( e-> e.getAge() > 1)
@@ -67,27 +67,26 @@ public class Test1 {
 		Optional<User> ouser = Optional.ofNullable(new User("1","zhansan",10));
 		//System.out.println(ouser.map(User:: getAge).get());
  		
-		System.err.println("list"+list);
+		System.out.println("list"+list);
 		
-	    System.out.println("-------------------orelse--------------------");
+	    System.err.println("-------------------orelse--------------------");
 	    Integer aa = null;
 	    int a = Optional.ofNullable(aa).orElse(1)-1;
 	    System.out.println("a:"+a);
 	    
 		
-	    System.out.println("-------------------orelse2--------------------");
+	    System.err.println("-------------------orelse2--------------------");
 	    String aa2 = "";
 	    String aaaa2 = Optional.ofNullable(aa2).orElse("1");
 	    System.out.println("aaaa2:"+aaaa2);
 	    
 	    
-	    System.out.println("-----------------group by ----------------------");
+	    System.err.println("-----------------group by ----------------------");
 	    List l = list.stream().limit(2).collect(Collectors.toList());
 	    System.out.println(l);
 	   System.out.println("group:"+list.stream().collect(Collectors.groupingBy(User::getName)));
 	    
-	    
-	    
+      	    
 	}
 
 }
