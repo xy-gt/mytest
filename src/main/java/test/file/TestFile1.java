@@ -12,9 +12,10 @@ public class TestFile1 {
 		System.out.println("偏移量------------------------------------------------------------");
 		String s = "1234567890asdfghjkl";
 		byte[] b = s.getBytes();
-		File file = new File("D:\\work\\eclipsework\\test\\src\\test\\file\\a.abc");
+		File file = new File("D:\\work\\ideawork\\my_test\\src\\main\\java\\test\\file\\a.abc");
 		try {
 			FileOutputStream out = new FileOutputStream(file);
+			out.write("sssssssss".getBytes());
 			out.write(b, 0, 2);
 			out.write(b,8,10);
 			out.flush();
@@ -38,7 +39,7 @@ public class TestFile1 {
 		 * System.out.println(end - start); System.out.println(i + "��");
 		 */
 
-		System.out.println("临时文件------------------------------------------------------------");
+	/*	System.out.println("临时文件------------------------------------------------------------");
 	 
 		String pathTemp = "D:\\work\\eclipsework\\test\\src\\test\\file";
 		File fileTemp = File.createTempFile("aws", ".temp",new File(pathTemp));
@@ -52,7 +53,7 @@ public class TestFile1 {
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 	}
 
 }
