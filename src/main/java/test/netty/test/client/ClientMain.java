@@ -12,6 +12,10 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.timeout.IdleStateHandler;
 import io.netty.util.CharsetUtil;
+import test.netty.test.entity.HeadVo;
+import test.netty.test.entity.MessageVo;
+import test.netty.test.entity.MsgDecode;
+import test.netty.test.entity.MsgEncoder;
 import test.netty.test.idle.ClientHandler2;
 
 import java.net.InetSocketAddress;
@@ -45,7 +49,9 @@ public class ClientMain {
                                 @Override
                                 protected void initChannel(SocketChannel ch) throws Exception {
                                     System.out.println("connected...");
-                                   // ch.pipeline().addLast(new ClientHandler());
+                                    ch.pipeline().addLast(new MsgDecode());
+                                    ch.pipeline().addLast(new MsgEncoder());
+                                    // ch.pipeline().addLast(new ClientHandler());
                                     ch.pipeline().addLast(new IdleStateHandler(0, 0, 15));
                                     ch.pipeline().addLast(new ClientHandler2());
                                 }
@@ -56,7 +62,6 @@ public class ClientMain {
             cf = b.connect().sync();
             // 连接完成
             System.out.println("connected...");
-
             Scanner scanner = new Scanner(System.in);
             while (true) {
                 System.out.println("请输入：");
@@ -64,8 +69,9 @@ public class ClientMain {
                 if ("exit".equals(string)) {
                     break;
                 }
-                cf.channel().write(Unpooled.copiedBuffer(string, CharsetUtil.UTF_8));
-                cf.channel().flush();
+            /*    cf.channel().write(Unpooled.copiedBuffer(string, CharsetUtil.UTF_8));
+                cf.channel().flush();*/
+                cf.channel().writeAndFlush(new MessageVo(new HeadVo(string.getBytes("UTF-8").length,1,3),string));
             }
 
             cf.channel().closeFuture().sync(); // 异步等待关闭连接channel

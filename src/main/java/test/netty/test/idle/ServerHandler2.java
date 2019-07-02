@@ -2,9 +2,11 @@ package test.netty.test.idle;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
+import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.util.CharsetUtil;
 
+@ChannelHandler.Sharable
 public class ServerHandler2 extends ServiceHeartbeatHandler {
     public ServerHandler2() {
         super("server");

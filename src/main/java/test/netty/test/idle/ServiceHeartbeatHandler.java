@@ -1,14 +1,22 @@
 package test.netty.test.idle;
 
 import io.netty.buffer.ByteBuf;
+import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.handler.timeout.IdleStateEvent;
+import io.netty.util.CharsetUtil;
+import test.netty.test.entity.HeadVo;
+import test.netty.test.entity.MessageVo;
 
-public abstract class ServiceHeartbeatHandler extends SimpleChannelInboundHandler<ByteBuf> {
-    public static final byte PING_MSG = 1;
-    public static final byte PONG_MSG = 2;
-    public static final byte CUSTOM_MSG = 3;
+import java.util.Objects;
+import java.util.Optional;
+
+@ChannelHandler.Sharable
+public abstract class ServiceHeartbeatHandler extends SimpleChannelInboundHandler<Object> {
+    public static final int PING_MSG = 1;
+    public static final int PONG_MSG = 2;
+    public static final int CUSTOM_MSG = 3;
     protected String name;
     private int heartbeatCount = 0;
 
@@ -17,32 +25,40 @@ public abstract class ServiceHeartbeatHandler extends SimpleChannelInboundHandle
     }
 
     @Override
-    protected void channelRead0(ChannelHandlerContext context, ByteBuf byteBuf) throws Exception {
-        if (byteBuf.getByte(4) == PING_MSG) {
+    protected void channelRead0(ChannelHandlerContext context, Object msg) throws Exception {
+
+        MessageVo mess = (MessageVo) msg;
+        HeadVo headVo = mess.getHead();
+
+        if (Objects.equals(headVo.getType(),PING_MSG)) {
             sendPongMsg(context);
-        } else if (byteBuf.getByte(4) == PONG_MSG){
+        } else if (Objects.equals(headVo.getType(),PONG_MSG)) {
             System.out.println("----------sned pong--------------");
-        } else {
-            handleData(context, byteBuf);
+        } else if (Objects.equals(headVo.getType(),CUSTOM_MSG)) {
+            System.out.println("----------------------service rec---------------------"+msg);
+           // handleData(context, byteBuf);
         }
     }
 
     protected void sendPingMsg(ChannelHandlerContext context) throws InterruptedException {
-        ByteBuf buf = context.alloc().buffer(5);
+        context.writeAndFlush(new MessageVo(new HeadVo(4,1,PING_MSG),"ping"));
+     /*   ByteBuf buf = context.alloc().buffer(5);
         buf.writeInt(5);
         buf.writeByte(PING_MSG);
         context.writeAndFlush(buf);
         heartbeatCount++;
-        System.out.println(name + " sent ping msg to " + context.channel().remoteAddress() + ", count: " + heartbeatCount);
+        System.out.println(name + " sent ping msg to " + context.channel().remoteAddress() + ", count: " + heartbeatCount);*/
     }
 
     private void sendPongMsg(ChannelHandlerContext context) throws InterruptedException {
-        ByteBuf buf = context.alloc().buffer(5);
+
+        context.writeAndFlush(new MessageVo(new HeadVo(4,1,PONG_MSG),"pong"));
+       /* ByteBuf buf = context.alloc().buffer(5);
         buf.writeInt(5);
         buf.writeByte(PONG_MSG);
         context.channel().writeAndFlush(buf);
         heartbeatCount++;
-        System.out.println(name + " sent pong msg to " + context.channel().remoteAddress() + ", count: " + heartbeatCount);
+        System.out.println(name + " sent pong msg to " + context.channel().remoteAddress() + ", count: " + heartbeatCount);*/
     }
 
     protected abstract void handleData(ChannelHandlerContext channelHandlerContext, ByteBuf byteBuf);
@@ -69,12 +85,12 @@ public abstract class ServiceHeartbeatHandler extends SimpleChannelInboundHandle
     }
 
     @Override
-    public void channelActive(ChannelHandlerContext ctx) throws Exception {
+    public void channelActive(ChannelHandlerContext ctx)  {
         System.err.println("---" + ctx.channel().remoteAddress() + " is active---");
     }
 
     @Override
-    public void channelInactive(ChannelHandlerContext ctx) throws Exception {
+    public void channelInactive(ChannelHandlerContext ctx)  {
         System.err.println("---" + ctx.channel().remoteAddress() + " is inactive---");
     }
 

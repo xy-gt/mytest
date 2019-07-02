@@ -9,6 +9,8 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.timeout.IdleStateHandler;
+import test.netty.test.entity.MsgDecode;
+import test.netty.test.entity.MsgEncoder;
 import test.netty.test.idle.ServerHandler2;
 
 public class ServerMain {
@@ -32,6 +34,8 @@ public class ServerMain {
                                 protected void initChannel(SocketChannel ch) throws Exception {
                                     System.out.println("connected...; Client:" + ch.remoteAddress());
                                    // ch.pipeline().addLast(new ServerHandler()); // 客户端触发操作
+                                    ch.pipeline().addLast(new MsgDecode());
+                                    ch.pipeline().addLast(new MsgEncoder());
                                     //设置读，写，读写 超时时间
                                     ch.pipeline().addLast(new IdleStateHandler(0, 0, 15));
                                     ch.pipeline().addLast(new ServerHandler2());

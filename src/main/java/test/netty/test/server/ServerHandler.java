@@ -13,7 +13,7 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
         ByteBuf in = (ByteBuf)msg;
     	System.out.println("server channelRead...; server received:" + in.toString(CharsetUtil.UTF_8));
     	in.clear();
-    	in.writeBytes("11111111111".getBytes());
+    	in.writeBytes("ok".getBytes());
         ctx.write(in);
     }
 

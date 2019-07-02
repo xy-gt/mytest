@@ -1,14 +1,20 @@
 package test.netty.test.idle;
 
 import io.netty.buffer.ByteBuf;
+import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.handler.timeout.IdleStateEvent;
+import io.netty.util.CharsetUtil;
+import test.netty.test.entity.HeadVo;
+import test.netty.test.entity.MessageVo;
 
-public abstract class ClientHeartbeatHandler extends SimpleChannelInboundHandler<ByteBuf> {
-    public static final byte PING_MSG = 1;
-    public static final byte PONG_MSG = 2;
-    public static final byte CUSTOM_MSG = 3;
+import java.util.Objects;
+
+public abstract class ClientHeartbeatHandler extends SimpleChannelInboundHandler {
+    public static final int PING_MSG = 1;
+    public static final int PONG_MSG = 2;
+    public static final int CUSTOM_MSG = 3;
     protected String name;
     private int heartbeatCount = 0;
 
@@ -17,13 +23,18 @@ public abstract class ClientHeartbeatHandler extends SimpleChannelInboundHandler
     }
 
     @Override
-    protected void channelRead0(ChannelHandlerContext context, ByteBuf byteBuf) throws Exception {
-        if (byteBuf.getByte(4) == PING_MSG) {
-            System.out.println("----------rec pin--------------");
-        } else if (byteBuf.getByte(4) == PONG_MSG){
+    protected void channelRead0(ChannelHandlerContext context, Object msg) throws Exception {
+
+        MessageVo mess = (MessageVo) msg;
+        HeadVo headVo = mess.getHead();
+
+        if (Objects.equals(headVo.getType(),PING_MSG)) {
+            System.out.println("----------rec ping--------------");
+        } else if (Objects.equals(headVo.getType(),PONG_MSG)) {
             System.out.println("----------rec pong--------------");
-        } else {
-            handleData(context, byteBuf);
+        } else if (Objects.equals(headVo.getType(),CUSTOM_MSG)) {
+            // handleData(context, byteBuf);
+            System.out.println("----------------------client rec---------------------"+msg);
         }
     }
 
@@ -52,6 +63,7 @@ public abstract class ClientHeartbeatHandler extends SimpleChannelInboundHandler
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
+
         System.err.println("---" + ctx.channel().remoteAddress() + " is active---");
         new Thread(() -> {
             while (true) {
@@ -61,17 +73,18 @@ public abstract class ClientHeartbeatHandler extends SimpleChannelInboundHandler
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
+                ctx.writeAndFlush(new MessageVo(new HeadVo(4,1,PING_MSG),"ping"));
 
-                ByteBuf byteBuf = ctx.alloc().buffer(5);
+           /*     ByteBuf byteBuf = ctx.alloc().buffer(5);
                 byteBuf.writeInt(5);
                 byteBuf.writeByte(1);
-                ctx.writeAndFlush(byteBuf);
+                ctx.writeAndFlush(byteBuf);*/
             }
         }).start();
     }
 
     @Override
-    public void channelInactive(ChannelHandlerContext ctx) throws Exception {
+    public void channelInactive(ChannelHandlerContext ctx)  {
         System.err.println("---" + ctx.channel().remoteAddress() + " is inactive---");
     }
 
