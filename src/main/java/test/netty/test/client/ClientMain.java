@@ -1,6 +1,7 @@
 package test.netty.test.client;
 
 import io.netty.bootstrap.Bootstrap;
+import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelInitializer;
@@ -45,7 +46,7 @@ public class ClientMain {
                                 protected void initChannel(SocketChannel ch) throws Exception {
                                     System.out.println("connected...");
                                    // ch.pipeline().addLast(new ClientHandler());
-                                    ch.pipeline().addLast(new IdleStateHandler(0, 0, 5));
+                                    ch.pipeline().addLast(new IdleStateHandler(0, 0, 15));
                                     ch.pipeline().addLast(new ClientHandler2());
                                 }
                             })
@@ -66,7 +67,6 @@ public class ClientMain {
                 cf.channel().write(Unpooled.copiedBuffer(string, CharsetUtil.UTF_8));
                 cf.channel().flush();
             }
-
 
             cf.channel().closeFuture().sync(); // 异步等待关闭连接channel
             // 关闭完成

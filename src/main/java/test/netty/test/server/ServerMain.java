@@ -33,7 +33,7 @@ public class ServerMain {
                                     System.out.println("connected...; Client:" + ch.remoteAddress());
                                    // ch.pipeline().addLast(new ServerHandler()); // 客户端触发操作
                                     //设置读，写，读写 超时时间
-                                    ch.pipeline().addLast(new IdleStateHandler(0, 0, 5));
+                                    ch.pipeline().addLast(new IdleStateHandler(0, 0, 15));
                                     ch.pipeline().addLast(new ServerHandler2());
                                 }
                             })

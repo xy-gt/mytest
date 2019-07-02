@@ -5,14 +5,14 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.handler.timeout.IdleStateEvent;
 
-public abstract class CustomHeartbeatHandler extends SimpleChannelInboundHandler<ByteBuf> {
+public abstract class ServiceHeartbeatHandler extends SimpleChannelInboundHandler<ByteBuf> {
     public static final byte PING_MSG = 1;
     public static final byte PONG_MSG = 2;
     public static final byte CUSTOM_MSG = 3;
     protected String name;
     private int heartbeatCount = 0;
 
-    public CustomHeartbeatHandler(String name) {
+    public ServiceHeartbeatHandler(String name) {
         this.name = name;
     }
 
@@ -21,13 +21,13 @@ public abstract class CustomHeartbeatHandler extends SimpleChannelInboundHandler
         if (byteBuf.getByte(4) == PING_MSG) {
             sendPongMsg(context);
         } else if (byteBuf.getByte(4) == PONG_MSG){
-            System.out.println(name + " get pong msg from " + context.channel().remoteAddress());
+            System.out.println("----------sned pong--------------");
         } else {
             handleData(context, byteBuf);
         }
     }
 
-    protected void sendPingMsg(ChannelHandlerContext context) {
+    protected void sendPingMsg(ChannelHandlerContext context) throws InterruptedException {
         ByteBuf buf = context.alloc().buffer(5);
         buf.writeInt(5);
         buf.writeByte(PING_MSG);
@@ -36,7 +36,7 @@ public abstract class CustomHeartbeatHandler extends SimpleChannelInboundHandler
         System.out.println(name + " sent ping msg to " + context.channel().remoteAddress() + ", count: " + heartbeatCount);
     }
 
-    private void sendPongMsg(ChannelHandlerContext context) {
+    private void sendPongMsg(ChannelHandlerContext context) throws InterruptedException {
         ByteBuf buf = context.alloc().buffer(5);
         buf.writeInt(5);
         buf.writeByte(PONG_MSG);

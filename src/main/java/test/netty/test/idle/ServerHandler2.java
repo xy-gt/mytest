@@ -5,7 +5,7 @@ import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.util.CharsetUtil;
 
-public class ServerHandler2 extends CustomHeartbeatHandler {
+public class ServerHandler2 extends ServiceHeartbeatHandler {
     public ServerHandler2() {
         super("server");
     }

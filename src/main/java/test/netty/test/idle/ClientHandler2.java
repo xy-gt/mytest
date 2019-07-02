@@ -6,7 +6,7 @@ import io.netty.util.CharsetUtil;
 
 import java.nio.charset.Charset;
 
-public class ClientHandler2 extends CustomHeartbeatHandler {
+public class ClientHandler2 extends ClientHeartbeatHandler {
     public ClientHandler2() {
         super("client");
     }
@@ -25,6 +25,5 @@ public class ClientHandler2 extends CustomHeartbeatHandler {
     @Override
     protected void handleAllIdle(ChannelHandlerContext ctx) {
         super.handleAllIdle(ctx);
-        sendPingMsg(ctx);
     }
 }
