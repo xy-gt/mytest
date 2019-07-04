@@ -1,17 +1,20 @@
 package test.netty.test.server;
 
 import io.netty.bootstrap.ServerBootstrap;
-import io.netty.channel.ChannelFuture;
-import io.netty.channel.ChannelInitializer;
-import io.netty.channel.ChannelOption;
-import io.netty.channel.EventLoopGroup;
+import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.handler.timeout.IdleStateHandler;
+import test.netty.test.entity.HeadVo;
+import test.netty.test.entity.MessageVo;
 import test.netty.test.entity.MsgDecode;
 import test.netty.test.entity.MsgEncoder;
 import test.netty.test.idle.ServerHandler2;
+import test.netty.test.idle.ServiceHeartbeatHandler;
+
+import java.util.Map;
+import java.util.Scanner;
 
 public class ServerMain {
     private final int port;
@@ -37,7 +40,7 @@ public class ServerMain {
                                     ch.pipeline().addLast(new MsgDecode());
                                     ch.pipeline().addLast(new MsgEncoder());
                                     //设置读，写，读写 超时时间
-                                    ch.pipeline().addLast(new IdleStateHandler(0, 0, 15));
+                                    ch.pipeline().addLast(new IdleStateHandler(15, 0, 0));
                                     ch.pipeline().addLast(new ServerHandler2());
                                 }
                             })
@@ -45,6 +48,23 @@ public class ServerMain {
                     .childOption(ChannelOption.SO_KEEPALIVE, true); 
             ChannelFuture cf = sb.bind().sync(); // 服务器异步创建绑定
             System.out.println(ServerMain.class + " started and listen on " + cf.channel().localAddress());
+
+            Scanner scanner = new Scanner(System.in);
+            while (true) {
+                System.out.println("请输入通道：");
+                String ip = scanner.next();
+                System.out.println("请输入内容：");
+                String string = scanner.next();
+                if ("exit".equals(string)) {
+                    break;
+                }
+                Map<String,ChannelHandlerContext> map =  ServiceHeartbeatHandler.connectMap;
+                ChannelHandlerContext ctx = map.get(ip);
+
+                ctx.channel().writeAndFlush(new MessageVo(new HeadVo(string.getBytes("UTF-8").length,1,3),string));
+            }
+
+
             cf.channel().closeFuture().sync(); // 关闭服务器通道
         } finally {
             group.shutdownGracefully().sync(); // 释放线程池资源

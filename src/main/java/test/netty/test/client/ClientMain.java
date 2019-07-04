@@ -52,7 +52,7 @@ public class ClientMain {
                                     ch.pipeline().addLast(new MsgDecode());
                                     ch.pipeline().addLast(new MsgEncoder());
                                     // ch.pipeline().addLast(new ClientHandler());
-                                    ch.pipeline().addLast(new IdleStateHandler(0, 0, 15));
+                                    ch.pipeline().addLast(new IdleStateHandler(0, 10, 0));
                                     ch.pipeline().addLast(new ClientHandler2());
                                 }
                             })

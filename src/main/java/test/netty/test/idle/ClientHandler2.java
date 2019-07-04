@@ -1,25 +1,16 @@
 package test.netty.test.idle;
 
-import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
-import io.netty.util.CharsetUtil;
-
-import java.nio.charset.Charset;
+import test.netty.test.entity.HeadVo;
+import test.netty.test.entity.MessageVo;
 
 public class ClientHandler2 extends ClientHeartbeatHandler {
-    public ClientHandler2() {
-        super("client");
-    }
 
     @Override
-    protected void handleData(ChannelHandlerContext channelHandlerContext, ByteBuf byteBuf) {
-
-        String d = byteBuf.readBytes(byteBuf.readableBytes()).toString(CharsetUtil.UTF_8);
-       /* byte[] data = new byte[byteBuf.readableBytes() - 5];
-        byteBuf.skipBytes(5);
-        byteBuf.readBytes(data);
-        String content = new String(data);*/
-        System.out.println(name + " get content: " + d);
+    protected void recMsg(ChannelHandlerContext channelHandlerContext, Object msg) {
+        System.out.println("----------------------client rec---------------------");
+        MessageVo mess = (MessageVo) msg;
+        System.out.println(mess.getContent());
     }
 
     @Override

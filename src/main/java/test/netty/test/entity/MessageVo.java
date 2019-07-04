@@ -13,6 +13,8 @@ public class MessageVo implements Serializable {
     //消息body
     private String content;
 
+    private String channelId;
+
     public MessageVo(HeadVo head, String content) {
         this.head = head;
         this.content = content;
@@ -34,11 +36,20 @@ public class MessageVo implements Serializable {
         this.content = content;
     }
 
+    public String getChannelId() {
+        return channelId;
+    }
+
+    public void setChannelId(String channelId) {
+        this.channelId = channelId;
+    }
+
     @Override
     public String toString() {
         return "MessageVo{" +
                 "head=" + head +
                 ", content='" + content + '\'' +
+                ", channelId='" + channelId + '\'' +
                 '}';
     }
 }

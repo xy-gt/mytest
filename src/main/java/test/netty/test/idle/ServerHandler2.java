@@ -1,28 +1,20 @@
 package test.netty.test.idle;
 
-import io.netty.buffer.ByteBuf;
-import io.netty.buffer.Unpooled;
-import io.netty.channel.ChannelHandler;
+import io.netty.channel.ChannelHandler.Sharable;
 import io.netty.channel.ChannelHandlerContext;
-import io.netty.util.CharsetUtil;
+import test.netty.test.entity.MessageVo;
 
-@ChannelHandler.Sharable
+@Sharable
 public class ServerHandler2 extends ServiceHeartbeatHandler {
-    public ServerHandler2() {
-        super("server");
-    }
 
     @Override
-    protected void handleData(ChannelHandlerContext channelHandlerContext, ByteBuf buf) {
-      /*  byte[] data = new byte[buf.readableBytes() - 5];
-        ByteBuf responseBuf = Unpooled.copiedBuffer(buf);
-        buf.skipBytes(5);
-        buf.readBytes(data);
-        String content = new String(data);*/
-        String d = buf.readBytes(buf.readableBytes()).toString(CharsetUtil.UTF_8);
-        System.out.println(name + " get content: " + d);
-      //  channelHandlerContext.write(responseBuf);
+    protected void recMsg(ChannelHandlerContext channelHandlerContext, Object msg) {
+        System.out.println("----------------------service rec---------------------");
+
+        MessageVo mess = (MessageVo) msg;
+        System.out.println(mess.getContent());
     }
+
 
     @Override
     protected void handleReaderIdle(ChannelHandlerContext ctx) {

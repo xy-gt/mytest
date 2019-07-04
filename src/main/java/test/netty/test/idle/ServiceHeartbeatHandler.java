@@ -1,7 +1,7 @@
 package test.netty.test.idle;
 
 import io.netty.buffer.ByteBuf;
-import io.netty.channel.ChannelHandler;
+import io.netty.channel.ChannelHandler.Sharable;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.handler.timeout.IdleStateEvent;
@@ -9,21 +9,21 @@ import io.netty.util.CharsetUtil;
 import test.netty.test.entity.HeadVo;
 import test.netty.test.entity.MessageVo;
 
+import java.net.SocketAddress;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentMap;
 
-@ChannelHandler.Sharable
+@Sharable
 public abstract class ServiceHeartbeatHandler extends SimpleChannelInboundHandler<Object> {
     public static final int PING_MSG = 1;
     public static final int PONG_MSG = 2;
     public static final int CUSTOM_MSG = 3;
+    public static final int REGISTER = 4;
+
     protected String name;
-    private int heartbeatCount = 0;
-
-    public ServiceHeartbeatHandler(String name) {
-        this.name = name;
-    }
-
+    public static final ConcurrentMap<String,ChannelHandlerContext> connectMap = new ConcurrentHashMap();
     @Override
     protected void channelRead0(ChannelHandlerContext context, Object msg) throws Exception {
 
@@ -35,8 +35,11 @@ public abstract class ServiceHeartbeatHandler extends SimpleChannelInboundHandle
         } else if (Objects.equals(headVo.getType(),PONG_MSG)) {
             System.out.println("----------sned pong--------------");
         } else if (Objects.equals(headVo.getType(),CUSTOM_MSG)) {
-            System.out.println("----------------------service rec---------------------"+msg);
-           // handleData(context, byteBuf);
+           recMsg(context,msg);
+        } else {
+              String addr = context.channel().remoteAddress().toString();
+              mess.setChannelId(addr.substring(addr.indexOf(":")));
+              register(context,mess.getContent());
         }
     }
 
@@ -61,7 +64,7 @@ public abstract class ServiceHeartbeatHandler extends SimpleChannelInboundHandle
         System.out.println(name + " sent pong msg to " + context.channel().remoteAddress() + ", count: " + heartbeatCount);*/
     }
 
-    protected abstract void handleData(ChannelHandlerContext channelHandlerContext, ByteBuf byteBuf);
+    protected abstract void recMsg(ChannelHandlerContext channelHandlerContext, Object msg);
 
     @Override
     public void userEventTriggered(ChannelHandlerContext ctx, Object evt) throws Exception {
@@ -92,6 +95,7 @@ public abstract class ServiceHeartbeatHandler extends SimpleChannelInboundHandle
     @Override
     public void channelInactive(ChannelHandlerContext ctx)  {
         System.err.println("---" + ctx.channel().remoteAddress() + " is inactive---");
+        connectMap.remove(ctx.channel().remoteAddress().toString());
     }
 
     protected void handleReaderIdle(ChannelHandlerContext ctx) {
@@ -104,5 +108,27 @@ public abstract class ServiceHeartbeatHandler extends SimpleChannelInboundHandle
 
     protected void handleAllIdle(ChannelHandlerContext ctx) {
         System.err.println("---ALL_IDLE---");
+    }
+
+    /**
+     * 注册
+     * @param ctx
+     */
+    public void register(ChannelHandlerContext ctx, String msg) {
+        String addr = ctx.channel().remoteAddress().toString();
+        connectMap.put(addr.substring(addr.indexOf(":")+1),ctx);
+    }
+
+    /**
+     * 异常
+     * @param ctx
+     * @param cause
+     * @throws Exception
+     */
+    @Override
+    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+        System.out.println("server occur exception:" + cause.getMessage());
+       // cause.printStackTrace();
+        ctx.close(); // 关闭发生异常的连接
     }
 }
