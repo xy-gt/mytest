@@ -10,7 +10,7 @@ public class TestLong {
 		System.out.println(Long.bitCount(10));
 		System.err.println(Long.parseLong("101"));
 
-		String s = "[1001,1002]";
+		String s = "1001,1002";
 		
 		System.out.println(Arrays.asList(s));
 		

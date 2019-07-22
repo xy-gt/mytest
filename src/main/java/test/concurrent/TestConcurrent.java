@@ -1,8 +1,6 @@
 package test.concurrent;
 
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.concurrent.*;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -15,10 +13,13 @@ public class TestConcurrent {
 
 	static int a = 0;
     Lock lock = new ReentrantLock(false);
+    static TestConcurrent testConcurrent = new TestConcurrent();
 	public static void main(String[] args) throws InterruptedException {
 
 		CountDownLatch countDownLatch = new CountDownLatch(1000);
-		ExecutorService ex1 = Executors.newFixedThreadPool(1);
+		ExecutorService ex1 = new ThreadPoolExecutor(10, 10,
+                0L, TimeUnit.MILLISECONDS,
+                new LinkedBlockingQueue<Runnable>());
 		
 		for (int i = 0; i < 1000; i++) {
 			ex1.execute(() -> {
@@ -27,16 +28,21 @@ public class TestConcurrent {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                new TestConcurrent().doTest(Thread.currentThread().getName());
+                testConcurrent.doTest3(Thread.currentThread().getName());
 			});
 			countDownLatch.countDown();
 		}
-		Thread.sleep(60000);
+		Thread.sleep(5000);
 		System.err.println("end a:"+a);
 		ex1.shutdown();
 
 	}
-
+    void doTest3(String n) {
+	    synchronized (this) {
+            a++;
+            System.out.println("thread name:"+n+",a:"+a);
+        }
+    }
 	synchronized void doTest2(String n){
         a++;
         System.out.println("thread name:"+n+",a:"+a);
