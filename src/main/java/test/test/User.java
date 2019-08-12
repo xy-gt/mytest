@@ -1,5 +1,8 @@
 package test.test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @Description:
  * @Author: panda
@@ -10,6 +13,20 @@ public class User {
     private Integer id;
 
     private String name;
+
+    private String parentName;
+
+    private List<User> child ;
+
+    public User() {
+
+    }
+
+    public User(Integer id, String name, String parentName) {
+        this.id = id;
+        this.name = name;
+        this.parentName = parentName;
+    }
 
     public Integer getId() {
         return id;
@@ -27,11 +44,29 @@ public class User {
         this.name = name;
     }
 
+    public String getParentName() {
+        return parentName;
+    }
+
+    public void setParentName(String parentName) {
+        this.parentName = parentName;
+    }
+
+    public List<User> getChild() {
+        return child;
+    }
+
+    public void setChild(List<User> child) {
+        this.child = child;
+    }
+
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
+                ", parentName='" + parentName + '\'' +
+                ", child=" + child +
                 '}';
     }
 }

@@ -71,6 +71,14 @@ public  class Test {
         });
         System.out.println(list);
 
+        StringBuilder stringBuilder = new StringBuilder("aaa,bbb");
+        System.out.println(stringBuilder.indexOf("asaa") == -1);
+
+        List l = new ArrayList();
+        l.add("1");
+        l.add("2");
+        System.out.println(l.indexOf("11"));
+
     }
 
 
