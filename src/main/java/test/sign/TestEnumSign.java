@@ -1,15 +1,13 @@
 package test.sign;
 
 public enum TestEnumSign {
-	INSTANCE;
-	
-	private SignUser signUser;
-	public void TestEnumSign() {
-		signUser = new SignUser();
-	}
+    INSTANCE;
 
-	public SignUser getSign() {
-		return signUser;
-	}
+    TestEnumSign() {
+    }
+
+    public void t1() {
+        System.out.println("sssssss");
+    }
 
 }

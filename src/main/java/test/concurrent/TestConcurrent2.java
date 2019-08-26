@@ -13,7 +13,7 @@ import java.util.concurrent.locks.ReentrantLock;
 public class TestConcurrent2 {
 
 	 int a = 0;
-    static TestConcurrent testConcurrent2 = new TestConcurrent();
+    static TestConcurrent2 testConcurrent2 = new TestConcurrent2();
 	public static void main(String[] args) throws InterruptedException {
 
 		CountDownLatch countDownLatch = new CountDownLatch(1000);
@@ -28,8 +28,12 @@ public class TestConcurrent2 {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                testConcurrent2.doTest3(Thread.currentThread().getName());
-			});
+                try {
+                    testConcurrent2.test3(Thread.currentThread().getName());
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            });
 			countDownLatch.countDown();
 		}
 		ex1.shutdown();
@@ -38,7 +42,6 @@ public class TestConcurrent2 {
 
 	public  void test3(String name) throws InterruptedException {
         Random random = new Random();
-
 	    Thread.sleep(random.nextInt(200));
 	    a++;
         System.out.println(name+":"+a);

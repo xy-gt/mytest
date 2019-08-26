@@ -33,6 +33,7 @@ public class MpSort {
          System.out.println("aa:"+a);
 
         //插入排序
+        int b = 0;
         int [] arr2 = {1,2,4,5,3,67,2,566,33,2,68,86,3,5,7,3,24,5,646,46,46,6,3,5,6,75,76,86,8,6,57,7,7,4,4,6
                 ,64,6,46,46,3,2,4,7,8,97,9,9,6,43,2,2222,4,542,6,7,7,332,2,24,6,8,0,6,64,4,4,55,22,2,5,25};
         for (int i = 1; i < arr2.length; i++) {
@@ -41,37 +42,12 @@ public class MpSort {
             for (; j >= 0 && arr2[j] > temp; j--) {
                 //将大于temp的值整体后移一个单位
                 arr2[j + 1] = arr2[j];
+                b++;
             }
             arr2[j + 1] = temp;
         }
+        System.out.println("b:"+b);
         System.out.println("arr2:"+Arrays.toString(arr2));
-
-
-        //自定义插入排序
-        int [] arr3 = {2,1,4,5,3,67,2,566,33,2,68,86,3,5,7,3,24,5,646,46,46,6,3,5,6,75,76,86,8,6,57,7,7,4,4,6
-                ,64,6,46,46,3,2,4,7,8,97,9,9,6,43,2,2222,4,542,6,7,7,332,2,24,6,8,0,6,64,4,4,55,22,2,5,25};
-
-        for (int i = 1; i < arr3.length ; i++) {
-          int currVal = arr3[i];
-          int j = i - 1;
-            for (; j >= 0 && currVal < arr3[j]; j--) {
-                if (currVal < arr3[j]) {
-                    arr3[j+1] = arr3[j];
-                } else {
-                    continue;
-                }
-            }
-            arr3[j+1] = currVal;
-        }
-        System.out.println("arr3:"+Arrays.toString(arr3));
-
-
-
-
-
-
-
-
 
 
 
