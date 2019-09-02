@@ -1,23 +1,19 @@
 package test.thread;
 
-import java.util.concurrent.Callable;
-import java.util.concurrent.FutureTask;
+import java.util.concurrent.*;
 
 public class TestCallable {
 
 	public static void main(String[] args) throws Exception {
-		System.out.println("���߳̿�ʼ��"+Thread.currentThread().getName());
-	
-		Callable ca = new Enter().en();
-		FutureTask<String> future = new FutureTask(ca);
-		new Thread(future).start();
-		System.out.println("�첽ֵ-----------------"+future.get());
-		System.out.println("���߳̽�����"+Thread.currentThread().getName());
-		
-		
-		FutureTask<String> future2 = new FutureTask(new E1());
-		new Thread(future2).start();
-		System.out.println(future2.get());
+        System.out.println("主线程："+Thread.currentThread().getName());
+
+        ExecutorService executorService = Executors.newFixedThreadPool(2);
+
+        Callable ca = new Enter().en();
+        Future<String> future = executorService.submit(ca);
+
+		System.out.println("结果-----------------"+future.get());
+
 	}
 
 }
@@ -25,28 +21,12 @@ public class TestCallable {
 class Enter {
 	public Callable en() throws Exception {
 		
-		Callable<String> re = new Callable<String>() {
+		Callable<String> re = () -> {
+            System.out.println("call线程："+Thread.currentThread().getName());
 
-			@Override
-			public String call() throws Exception {
-				System.out.println("���߳̿�ʼ��"+Thread.currentThread().getName());
-				
-				return "helloworld";
-			}
-			
+            return "helloworld";
 		};
 	    
 		return re;
 	}
-}
-
-
-class E1 implements Callable<String>{
-
-	@Override
-	public String call() throws Exception {
-		
-		return "sssssssssssssssssssss";
-	}
-	
 }
