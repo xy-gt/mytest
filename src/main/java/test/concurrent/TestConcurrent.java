@@ -16,19 +16,19 @@ public class TestConcurrent {
     static TestConcurrent testConcurrent = new TestConcurrent();
 	public static void main(String[] args) throws InterruptedException {
 
-		CountDownLatch countDownLatch = new CountDownLatch(1000);
+		CountDownLatch countDownLatch = new CountDownLatch(10);
 		ExecutorService ex1 = new ThreadPoolExecutor(10, 10,
                 0L, TimeUnit.MILLISECONDS,
                 new LinkedBlockingQueue<Runnable>());
 		
-		for (int i = 0; i < 1000; i++) {
+		for (int i = 0; i < 10; i++) {
 			ex1.execute(() -> {
                 try {
                     countDownLatch.await();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                testConcurrent.doTest3(Thread.currentThread().getName());
+                testConcurrent.doTest(Thread.currentThread().getName());
 			});
 			countDownLatch.countDown();
 		}
@@ -52,9 +52,6 @@ public class TestConcurrent {
          try {
              a++;
              System.out.println("thread name:"+name+",a:"+a);
-             if (a== 349) {
-                 throw new RuntimeException("手动抛出异常");
-             }
          } finally {
              lock.unlock();
          }
