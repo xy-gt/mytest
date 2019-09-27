@@ -79,6 +79,12 @@ public  class Test {
         l.add("2");
         System.out.println(l.indexOf("11"));
 
+
+        String q = "srfsfsdf";
+        System.out.printf(q.intern());
+
+
+
     }
 
 

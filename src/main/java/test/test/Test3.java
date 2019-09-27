@@ -1,7 +1,10 @@
 package test.test;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Hashtable;
 import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @Description:
@@ -23,7 +26,56 @@ class Test4{
 
         list.clear();
         list.add("b");
-        System.out.println("æ¸…é™¤listçš„å€¼");
+        System.out.println("Çå³ýlistµÄÖµ");
+
+
+
+        new Thread(() -> {
+            synchronized (this) {
+                System.out.println("×ÓÏß³Ì1¿ªÊ¼");
+                try {
+                    this.wait();
+                    System.out.println("wait1 µÈ´ýÁË5Ãë");
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
+            }
+
+
+        }).start();
+
+        new Thread(() -> {
+            synchronized (this) {
+                System.out.println("×ÓÏß³Ì3¿ªÊ¼");
+                try {
+                    this.wait();
+                    System.out.println("wait3 µÈ´ýÁË5Ãë");
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+
+            }
+
+
+        }).start();
+
+        new Thread(() -> {
+            synchronized (this) {
+                System.out.println("×ÓÏß³Ì2¿ªÊ¼");
+                System.out.println("2---------------------->");
+                // this.wait(5000);
+                try {
+                    Thread.currentThread().sleep(2000);
+                    System.out.println("»½ÐÑ£º");
+                    notifyAll();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+
+
+        }).start();
     }
 
 }
