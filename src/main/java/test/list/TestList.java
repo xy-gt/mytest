@@ -38,6 +38,6 @@ public class TestList {
 
         list1.stream().forEach( p -> System.out.println(p));
 
-        System.out.println("sssssssss");
+        System.out.println("list:"+list1);
     }
 }
