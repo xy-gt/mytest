@@ -35,10 +35,5 @@ public class TestList {
         boolean equalCollection = CollectionUtils.isEqualCollection(list1, list11);
         System.out.println(equalCollection);
 
-
-        list1.stream().forEach( p -> System.out.println(p));
-
-        System.out.println("list:"+list1);
-        System.out.println("分支修改");
     }
 }
