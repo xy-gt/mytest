@@ -10,6 +10,7 @@ public class StringfilterUtil {
 		String str = "\\“·”》☆斩断★ *adCVs*34_a _09_b5*[/435^*&城池()^$$&*).{}+.|.)%%*(*.中国}34{45[]12.fd'*&999下面是中文的字符￥……{}【】。，；’“‘”？";
 		System.out.println(str);
 		System.out.println(StringFilter(str));
+
 	}// 过滤特殊字符
  
 	public static String StringFilter(String str) throws PatternSyntaxException {
