@@ -1,5 +1,6 @@
 package test.test;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,9 +9,10 @@ import java.util.List;
  * @Author: panda
  * @Date: 2019/7/18 18:11
  */
-public class User {
+public class User implements Serializable {
 
     private Integer id;
+    private Integer id2;
 
     private String name;
 
@@ -34,6 +36,13 @@ public class User {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+    public Integer getId2() {
+        return id2;
+    }
+
+    public void setId2(Integer id2) {
+        this.id2 = id2;
     }
 
     public String getName() {
