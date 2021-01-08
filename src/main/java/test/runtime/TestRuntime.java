@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Scanner;
 
 /**
- * ����Runtime 
+ * 测试Runtime
  * @author panda *
  */
 public class TestRuntime {
@@ -26,6 +26,7 @@ public class TestRuntime {
                 if (command == null || command == "") {
                     return;
                 }
+                // mvn 打包 cmd /c   cd D:\ideaworkspace\mytest && mvn clean package
                 process = Runtime.getRuntime().exec(command);
 
                 InputStream  in = process.getInputStream();
@@ -34,6 +35,7 @@ public class TestRuntime {
                     System.out.println(read.readLine());
                 }
                 process.waitFor();
+                process.destroy();
             } catch (Exception e) {
                 e.printStackTrace();
             }

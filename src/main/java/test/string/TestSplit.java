@@ -1,5 +1,7 @@
 package test.string;
 
+import java.util.Arrays;
+
 public class TestSplit {
 
 	public static void main(String[] args) {
@@ -12,6 +14,20 @@ public class TestSplit {
 			System.out.println(string);
 			
 		}
+
+
+	     String  command = "mvn clean package -Dmaven.test.skip=true";
+
+		System.out.println(Arrays.toString(command.split(" ")));
+
+		StringBuffer stringBuffer = new StringBuffer();
+
+		Integer integer = 123;
+
+		stringBuffer.append("as:"+"\"" +integer+"\"");
+		stringBuffer.append("ssa:"+""+integer+"");
+		System.out.println(stringBuffer);
+
 	}
 
 }

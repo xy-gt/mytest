@@ -2,6 +2,9 @@ package test.sort;
 
 import java.util.Arrays;
 
+/**
+ * 排序
+ */
 public class MpSort {
 
 	//冒泡
