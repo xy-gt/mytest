@@ -3,6 +3,7 @@ package test.testdate;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 public class TestDate {
@@ -23,9 +24,14 @@ public class TestDate {
 		System.out.println("sss2:"+df.format(new Date(1559096657625L)));
 		
 		System.out.println("--"+ (1557728992384L-1557721514752L));
-	
-		
-		
+
+
+		LocalDateTime localDateTime = LocalDateTime.now();
+		System.out.println(localDateTime);
+
+		System.out.println(localDateTime.plusDays(-1));
+		System.out.println(localDateTime.plusHours(-1));
+
 	}
 
 }

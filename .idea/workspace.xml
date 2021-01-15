@@ -37,6 +37,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5631ca5c-25bf-4f0c-8878-df0135cca3de" name="Default Changelist" comment="1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/testdate/TestDate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/testdate/TestDate.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -113,13 +114,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Test111">
-    <configuration name="Test11" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.test.Test11" />
+  <component name="RunManager" selected="Application.TestFinally">
+    <configuration name="Lock" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.testLock.Lock" />
       <module name="mytest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.test.*" />
+          <option name="PATTERN" value="test.testLock.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -127,12 +128,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test111" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.test.Test111" />
+    <configuration name="Test1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.algorithm.Test1" />
       <module name="mytest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.test.*" />
+          <option name="PATTERN" value="test.algorithm.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -140,12 +141,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.test.Test2" />
+    <configuration name="TestDate" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.testdate.TestDate" />
       <module name="mytest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.test.*" />
+          <option name="PATTERN" value="test.testdate.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -153,12 +154,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test5" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.test.Test5" />
+    <configuration name="TestFinally" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.testLock.TestFinally" />
       <module name="mytest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.test.*" />
+          <option name="PATTERN" value="test.testLock.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -166,12 +167,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestLong" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.test.TestLong" />
+    <configuration name="ThreadPrint2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.thread.ThreadPrint2" />
       <module name="mytest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.test.*" />
+          <option name="PATTERN" value="test.thread.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -180,19 +181,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Test111" />
-      <item itemvalue="Application.TestLong" />
-      <item itemvalue="Application.Test11" />
-      <item itemvalue="Application.Test5" />
-      <item itemvalue="Application.Test2" />
+      <item itemvalue="Application.Test1" />
+      <item itemvalue="Application.ThreadPrint2" />
+      <item itemvalue="Application.TestDate" />
+      <item itemvalue="Application.Lock" />
+      <item itemvalue="Application.TestFinally" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Test111" />
-        <item itemvalue="Application.Test2" />
-        <item itemvalue="Application.Test5" />
-        <item itemvalue="Application.Test11" />
-        <item itemvalue="Application.TestLong" />
+        <item itemvalue="Application.TestFinally" />
+        <item itemvalue="Application.Lock" />
+        <item itemvalue="Application.Test1" />
+        <item itemvalue="Application.TestDate" />
+        <item itemvalue="Application.ThreadPrint2" />
       </list>
     </recent_temporary>
   </component>
@@ -226,6 +227,8 @@
       <workItem from="1610419009892" duration="4369000" />
       <workItem from="1610443137500" duration="891000" />
       <workItem from="1610523522791" duration="4379000" />
+      <workItem from="1610586139254" duration="870000" />
+      <workItem from="1610674222145" duration="2444000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1606380092960</created>
@@ -349,6 +352,11 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/mytest$TestDate.ic" NAME="TestDate Coverage Results" MODIFIED="1610674367009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>test.testdate.*</FILTER>
+    </SUITE>
   </component>
   <component name="masterDetails">
     <states>
