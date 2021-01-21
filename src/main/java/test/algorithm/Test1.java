@@ -5,6 +5,7 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
+ * 多线程顺序打印1和2
  * @Author xiongyong
  * @Date 2021/1/13
  */

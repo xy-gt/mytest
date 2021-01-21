@@ -37,7 +37,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5631ca5c-25bf-4f0c-8878-df0135cca3de" name="Default Changelist" comment="1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/test/testdate/TestDate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/testdate/TestDate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/algorithm/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/algorithm/Test1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/queue/TestQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/queue/TestQueue.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -114,7 +115,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TestFinally">
+  <component name="RunManager" selected="Application.TestQueue">
     <configuration name="Lock" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="test.testLock.Lock" />
       <module name="mytest" />
@@ -141,19 +142,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestDate" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.testdate.TestDate" />
-      <module name="mytest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.testdate.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="TestFinally" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="test.testLock.TestFinally" />
       <module name="mytest" />
@@ -167,12 +155,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ThreadPrint2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.thread.ThreadPrint2" />
+    <configuration name="TestPhaser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.testLock.TestPhaser" />
       <module name="mytest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.thread.*" />
+          <option name="PATTERN" value="test.testLock.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestQueue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.queue.TestQueue" />
+      <module name="mytest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.queue.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -182,18 +183,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.Test1" />
-      <item itemvalue="Application.ThreadPrint2" />
-      <item itemvalue="Application.TestDate" />
       <item itemvalue="Application.Lock" />
       <item itemvalue="Application.TestFinally" />
+      <item itemvalue="Application.TestPhaser" />
+      <item itemvalue="Application.TestQueue" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TestQueue" />
+        <item itemvalue="Application.TestPhaser" />
         <item itemvalue="Application.TestFinally" />
         <item itemvalue="Application.Lock" />
         <item itemvalue="Application.Test1" />
-        <item itemvalue="Application.TestDate" />
-        <item itemvalue="Application.ThreadPrint2" />
       </list>
     </recent_temporary>
   </component>
@@ -228,7 +229,9 @@
       <workItem from="1610443137500" duration="891000" />
       <workItem from="1610523522791" duration="4379000" />
       <workItem from="1610586139254" duration="870000" />
-      <workItem from="1610674222145" duration="2444000" />
+      <workItem from="1610674222145" duration="6636000" />
+      <workItem from="1611041447874" duration="4413000" />
+      <workItem from="1611190747189" duration="452000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1606380092960</created>
@@ -341,17 +344,6 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1607070205474" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/test/queue/TestQueue.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/mytest$TestDate.ic" NAME="TestDate Coverage Results" MODIFIED="1610674367009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
