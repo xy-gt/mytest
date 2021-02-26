@@ -20,9 +20,9 @@ public class SerializeTest {
         user.setName("ssssssss");
 
         String path = "D:\\ideaworkspace\\mytest\\src\\main\\java\\test\\serialize\\a.txt";
-        ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream(path));
+       /* ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream(path));
         objectOutputStream.writeObject(user);
-
+*/
 
         ObjectInputStream objectInputStream = new ObjectInputStream(new FileInputStream(path));
         User user1 = (User) objectInputStream.readObject();

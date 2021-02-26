@@ -1,5 +1,7 @@
 package test.lambda;
 
+import com.google.common.collect.Lists;
+
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -85,8 +87,20 @@ public class Test1 {
 	    List l = list.stream().limit(2).collect(Collectors.toList());
 	    System.out.println(l);
 	   System.out.println("group:"+list.stream().collect(Collectors.groupingBy(User::getName)));
-	    
-      	    
+
+
+		ArrayList<User> users = Lists.newArrayList(new User("1", "是", 10),
+				new User("2", "否"),
+				new User("3", "否", 20),
+				new User("4", "是", 34),
+				new User("5", "否"),
+				new User("6", "是", 29));
+
+		// 会空指针异常
+		List<User> collect = users.stream().filter(p -> p.getAge() > 1).collect(Collectors.toList());
+		System.out.println(collect);
+
+
 	}
 
 }
