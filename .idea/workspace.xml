@@ -36,11 +36,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5631ca5c-25bf-4f0c-8878-df0135cca3de" name="Default Changelist" comment="1">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/test/algorithm/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/algorithm/Test1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/test/queue/TestQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/queue/TestQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/test/TestLong.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/test/TestLong.java" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,6 +49,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -57,25 +58,20 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/java/test/netty/test/client/ClientMain.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/test/netty/test/server/ServerMain.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/test/netty/test/client/ClientMain.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="localRepository" value="D:\java\localRepository" />
-        <option name="mavenHome" value="D:/tool/apache-maven-3.6.0" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../tool/apache-maven-3.6.0" />
         <option name="userSettingsFile" value="D:\tool\apache-maven-3.6.0\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
   </component>
   <component name="ProjectId" id="1kie5acfU60vBuMkmOwx7oVusAI" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -85,6 +81,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -96,32 +93,20 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.23897912" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\work\ideawork\mytest\src\main\java" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Application.TestQueue">
-    <configuration name="Lock" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.testLock.Lock" />
+  <component name="RunManager" selected="Application.Test12">
+    <configuration name="Test1 (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.lambda.Test1" />
       <module name="mytest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.testLock.*" />
+          <option name="PATTERN" value="test.lambda.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -129,12 +114,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.algorithm.Test1" />
+    <configuration name="Test12" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.test.Test12" />
       <module name="mytest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.algorithm.*" />
+          <option name="PATTERN" value="test.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -142,12 +127,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestFinally" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.testLock.TestFinally" />
+    <configuration name="TestFile1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.file.TestFile1" />
       <module name="mytest" />
+      <option name="PROGRAM_PARAMETERS" value="-Dtest=null" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.testLock.*" />
+          <option name="PATTERN" value="test.file.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -155,12 +141,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestPhaser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.testLock.TestPhaser" />
+    <configuration name="TestGit" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.git.TestGit" />
       <module name="mytest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.testLock.*" />
+          <option name="PATTERN" value="test.git.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -168,37 +154,48 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestQueue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.queue.TestQueue" />
+    <configuration name="TestLong" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.test.TestLong" />
       <module name="mytest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.queue.*" />
+          <option name="PATTERN" value="test.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Test1" />
-      <item itemvalue="Application.Lock" />
-      <item itemvalue="Application.TestFinally" />
-      <item itemvalue="Application.TestPhaser" />
-      <item itemvalue="Application.TestQueue" />
+      <item itemvalue="Application.Test1 (1)" />
+      <item itemvalue="Application.TestGit" />
+      <item itemvalue="Application.TestLong" />
+      <item itemvalue="Application.TestFile1" />
+      <item itemvalue="Application.Test12" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TestQueue" />
-        <item itemvalue="Application.TestPhaser" />
-        <item itemvalue="Application.TestFinally" />
-        <item itemvalue="Application.Lock" />
-        <item itemvalue="Application.Test1" />
+        <item itemvalue="Application.Test12" />
+        <item itemvalue="Application.TestFile1" />
+        <item itemvalue="Application.TestLong" />
+        <item itemvalue="Application.TestGit" />
+        <item itemvalue="Application.Test1 (1)" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -231,7 +228,40 @@
       <workItem from="1610586139254" duration="870000" />
       <workItem from="1610674222145" duration="6636000" />
       <workItem from="1611041447874" duration="4413000" />
-      <workItem from="1611190747189" duration="452000" />
+      <workItem from="1611190747189" duration="1784000" />
+      <workItem from="1611277550068" duration="686000" />
+      <workItem from="1611645345487" duration="175000" />
+      <workItem from="1611884767139" duration="546000" />
+      <workItem from="1611885438569" duration="747000" />
+      <workItem from="1612160215606" duration="556000" />
+      <workItem from="1614249851521" duration="2523000" />
+      <workItem from="1614300480623" duration="294000" />
+      <workItem from="1615184055573" duration="8971000" />
+      <workItem from="1615251761008" duration="7430000" />
+      <workItem from="1615341720952" duration="7000" />
+      <workItem from="1615512928420" duration="1197000" />
+      <workItem from="1615514772412" duration="17293000" />
+      <workItem from="1615770648191" duration="1915000" />
+      <workItem from="1615810281264" duration="11000" />
+      <workItem from="1615874317550" duration="262000" />
+      <workItem from="1615880228711" duration="238000" />
+      <workItem from="1617001027808" duration="24000" />
+      <workItem from="1617071995556" duration="615000" />
+      <workItem from="1617081650442" duration="4883000" />
+      <workItem from="1617101803568" duration="6000" />
+      <workItem from="1617172054145" duration="361000" />
+      <workItem from="1617172530877" duration="1180000" />
+      <workItem from="1617180830564" duration="2552000" />
+      <workItem from="1617264102089" duration="2524000" />
+      <workItem from="1617325569910" duration="245000" />
+      <workItem from="1617349943709" duration="1146000" />
+      <workItem from="1617692290306" duration="1051000" />
+      <workItem from="1617702581456" duration="86000" />
+      <workItem from="1617864919787" duration="250000" />
+      <workItem from="1617867088669" duration="1472000" />
+      <workItem from="1618210032345" duration="85000" />
+      <workItem from="1618468578523" duration="11000" />
+      <workItem from="1618468595744" duration="1812000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1606380092960</created>
@@ -244,7 +274,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
@@ -286,64 +316,38 @@
         </entry>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
-    <option name="OPEN_TABS">
-      <set>
-        <option value="1" />
-      </set>
-    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="SHOW_DIRTY_RECURSIVELY" value="true" />
     <MESSAGE value="1" />
     <option name="LAST_COMMIT_MESSAGE" value="1" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="421" y="95" key="FileChooserDialogImpl" timestamp="1607070196984">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="421" y="95" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1607070196984" />
-    <state width="1237" height="187" key="GridCell.Tab.0.bottom" timestamp="1608713915698">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="187" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1608713915698" />
-    <state width="1237" height="187" key="GridCell.Tab.0.center" timestamp="1608713915698">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="187" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1608713915698" />
-    <state width="1237" height="187" key="GridCell.Tab.0.left" timestamp="1608713915698">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="187" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1608713915698" />
-    <state width="1237" height="187" key="GridCell.Tab.0.right" timestamp="1608713915698">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="187" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1608713915698" />
-    <state width="1237" height="204" key="GridCell.Tab.1.bottom" timestamp="1606381699504">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="204" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1606381699504" />
-    <state width="1237" height="204" key="GridCell.Tab.1.center" timestamp="1606381699504">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="204" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1606381699504" />
-    <state width="1237" height="204" key="GridCell.Tab.1.left" timestamp="1606381699504">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="204" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1606381699504" />
-    <state width="1237" height="204" key="GridCell.Tab.1.right" timestamp="1606381699504">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state width="1237" height="204" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1606381699504" />
-    <state x="142" y="0" key="SettingsEditor" timestamp="1607070205474">
-      <screen x="0" y="0" width="1280" height="680" />
-    </state>
-    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1607070205474" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../java/localRepository/org/gitlab4j/gitlab4j-api/4.15.3/gitlab4j-api-4.15.3.jar!/org/gitlab4j/api/GroupApi.class</url>
+          <line>192</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$PROJECT_DIR$/../../java/localRepository/org/gitlab4j/gitlab4j-api/4.15.3/gitlab4j-api-4.15.3.jar!/org/gitlab4j/api/UserApi.class</url>
+          <line>372</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/test/file/TestFile1.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/mytest$TestDate.ic" NAME="TestDate Coverage Results" MODIFIED="1610674367009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

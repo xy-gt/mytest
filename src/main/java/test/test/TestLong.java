@@ -3,6 +3,8 @@ package test.test;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class TestLong {
 
@@ -18,6 +20,14 @@ public class TestLong {
 		a.add("1".toString());
 		a.add("3".toString());
 		System.out.println(a);
+
+		Pattern pattern = Pattern.compile("[0-9]*");
+		Matcher isNum = pattern.matcher("223afaf".charAt(0)+"");
+		if (isNum.matches()) {
+			System.out.println("sss");
+		}else
+		System.out.println("fffffffff");
+
 	}
 
 }
