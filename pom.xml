@@ -49,7 +49,11 @@
             <artifactId>guava</artifactId>
             <version>30.0-jre</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.gitlab4j</groupId>
+            <artifactId>gitlab4j-api</artifactId>
+            <version>4.15.7</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
