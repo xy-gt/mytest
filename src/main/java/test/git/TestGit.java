@@ -20,9 +20,8 @@ import java.util.List;
 
 
 public class TestGit {
-  // public static String hosturl = "https://gitnew.hundsun.com";
-   public static String hosturl = "https://192.168.35.78:443";
-   private static String token = "kC1Rwx42y7RTufSk2qPW";
+   public static String hosturl = " ";
+   private static String token = " ";
 
    public static GitLabApi gitLabApi = new GitLabApi(hosturl,token);
 
