@@ -1,10 +1,11 @@
 package test.list;
 
+import com.google.common.collect.Lists;
 import org.apache.commons.collections4.CollectionUtils;
-import test.enums.SourceEnum;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Pattern;
 
 /**
  * @Author xiongyong
@@ -12,6 +13,7 @@ import java.util.List;
  */
 
 public class TestList {
+    final Pattern pattern = Pattern.compile("");
 
     public static void main(String[] args) {
 
@@ -34,6 +36,17 @@ public class TestList {
 
         boolean equalCollection = CollectionUtils.isEqualCollection(list1, list11);
         System.out.println(equalCollection);
+
+
+        ArrayList<Integer> integers = Lists.newArrayList(1, 343, 554, 52, 32, 32);
+
+        System.out.println(integers);
+        integers.remove(0);
+        System.out.println(integers);
+
+
+
+
 
     }
 }

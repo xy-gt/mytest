@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="GROUP_BY_SEVERITY" value="true" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="ALL" />
   </component>
@@ -36,15 +39,77 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5631ca5c-25bf-4f0c-8878-df0135cca3de" name="Default Changelist" comment="1">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/test/test/TestLong.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/test/TestLong.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/algorithm/SieldWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/algorithm/SieldWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/algorithm/TestThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/enums/SourceEnum.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/enums/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/file/FileZip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/file/FileZip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/git/TestGit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/git/TestGit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/lambda/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/lambda/Test1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/list/TestList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/list/TestList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/queue/TestQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/queue/TestQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/runtime/TestRuntime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/runtime/TestRuntime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/script/TestScript.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/script/TestScript.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/serialize/a.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/sign/SignUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/sign/TestEnumMain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/sign/TestEnumSign.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/sign/TestSign.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/socket/ClientSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/socket/ClientSocket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/socket/ServiceSocket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/socket/ServiceSocket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/sort/MpSort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/string/TestString1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/string/TestString1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/templet/Enter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/templet/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/test/AA$AA2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/test/AA.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/test/AA.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/test/AA.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/test/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/test/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/test/Test11.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/test/Test111.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/test/Test12.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/test/TestEcs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/test/Test2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/test/Test5.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/test/Test6.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/test/Test7.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/test/Test8.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/test/Test9.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/test/TestOOM.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/testLock/TestFinally.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/testdate/TestDate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/thread/TestThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/thread/TestThreadLocal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/thread/TestThreadPool3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/test/thread/TestThreadPool3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/test/thread/TestThreadaa.java" beforeDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="96" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="mytest" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -57,17 +122,30 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/java/test/netty/test/server/ServerMain.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/test/netty/test/client/ClientMain.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/test/netty/test/server/ServerMain.java" root0="SKIP_INSPECTION" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="localRepository" value="D:\java\localRepository" />
-        <option name="mavenHome" value="$PROJECT_DIR$/../../tool/apache-maven-3.6.0" />
+        <option name="mavenHome" value="D:/tool/apache-maven-3.6.0" />
         <option name="userSettingsFile" value="D:\tool\apache-maven-3.6.0\conf\settings.xml" />
       </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
     </option>
   </component>
   <component name="ProjectId" id="1kie5acfU60vBuMkmOwx7oVusAI" />
@@ -86,27 +164,49 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559793428197" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../HEP/HEP-core" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.23897912" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="test.algorithm" />
+      <recent name="test.unit" />
+      <recent name="test.jfrog.Model" />
+      <recent name="test.test.b" />
+      <recent name="test.file" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\ideaworkspace\mytest\src\main\java\test\jfrog" />
+      <recent name="D:\ideaworkspace\mytest\src\main\java\test\jfrog\Model" />
       <recent name="D:\work\ideawork\mytest\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Test12">
-    <configuration name="Test1 (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.lambda.Test1" />
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.JfrogTest2">
+    <configuration name="JfrogTest2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.jfrog.JfrogTest2" />
       <module name="mytest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="test.lambda.*" />
+          <option name="PATTERN" value="test.jfrog.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -114,48 +214,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test12" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.test.Test12" />
-      <module name="mytest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestFile1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.file.TestFile1" />
-      <module name="mytest" />
-      <option name="PROGRAM_PARAMETERS" value="-Dtest=null" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.file.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestGit" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.git.TestGit" />
-      <module name="mytest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.git.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestLong" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.test.TestLong" />
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.test.Test" />
       <module name="mytest" />
       <extension name="coverage">
         <pattern>
@@ -167,35 +227,77 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
+    <configuration name="Test1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.test.Test1" />
+      <module name="mytest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test11" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.test.Test11" />
+      <module name="mytest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test111" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.test.Test111" />
+      <module name="mytest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test9" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.test.Test9" />
+      <module name="mytest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Test1 (1)" />
-      <item itemvalue="Application.TestGit" />
-      <item itemvalue="Application.TestLong" />
-      <item itemvalue="Application.TestFile1" />
-      <item itemvalue="Application.Test12" />
+      <item itemvalue="Application.Test111" />
+      <item itemvalue="Application.Test11" />
+      <item itemvalue="Application.Test9" />
+      <item itemvalue="Application.Test" />
+      <item itemvalue="Application.Test1" />
+      <item itemvalue="Application.JfrogTest2" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Test12" />
-        <item itemvalue="Application.TestFile1" />
-        <item itemvalue="Application.TestLong" />
-        <item itemvalue="Application.TestGit" />
-        <item itemvalue="Application.Test1 (1)" />
+        <item itemvalue="Application.JfrogTest2" />
+        <item itemvalue="Application.Test1" />
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.Test9" />
+        <item itemvalue="Application.Test11" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -261,7 +363,170 @@
       <workItem from="1617867088669" duration="1472000" />
       <workItem from="1618210032345" duration="85000" />
       <workItem from="1618468578523" duration="11000" />
-      <workItem from="1618468595744" duration="1812000" />
+      <workItem from="1618468595744" duration="2352000" />
+      <workItem from="1619079528197" duration="5917000" />
+      <workItem from="1619427187427" duration="19000" />
+      <workItem from="1619601287706" duration="35000" />
+      <workItem from="1620524302247" duration="941000" />
+      <workItem from="1620608494856" duration="486000" />
+      <workItem from="1620720033129" duration="318000" />
+      <workItem from="1620808911937" duration="615000" />
+      <workItem from="1620986995184" duration="113000" />
+      <workItem from="1621328381246" duration="28000" />
+      <workItem from="1621834020810" duration="3099000" />
+      <workItem from="1621845230563" duration="1288000" />
+      <workItem from="1621848599073" duration="1860000" />
+      <workItem from="1621856090117" duration="1858000" />
+      <workItem from="1621904093354" duration="808000" />
+      <workItem from="1621928005868" duration="2000" />
+      <workItem from="1621939617497" duration="76000" />
+      <workItem from="1621942713961" duration="822000" />
+      <workItem from="1622195319889" duration="1771000" />
+      <workItem from="1622422693636" duration="6248000" />
+      <workItem from="1622618075867" duration="1779000" />
+      <workItem from="1622681921611" duration="123000" />
+      <workItem from="1623142848166" duration="1333000" />
+      <workItem from="1623922496607" duration="829000" />
+      <workItem from="1624173826265" duration="163000" />
+      <workItem from="1624242737092" duration="1495000" />
+      <workItem from="1624258410998" duration="664000" />
+      <workItem from="1624259712789" duration="125000" />
+      <workItem from="1624268791149" duration="399000" />
+      <workItem from="1624327367601" duration="17000" />
+      <workItem from="1624331636032" duration="15000" />
+      <workItem from="1624601863328" duration="108000" />
+      <workItem from="1624601975931" duration="293000" />
+      <workItem from="1625451533603" duration="1075000" />
+      <workItem from="1625467664397" duration="1643000" />
+      <workItem from="1625470320215" duration="239000" />
+      <workItem from="1625533686991" duration="1365000" />
+      <workItem from="1625648511667" duration="2279000" />
+      <workItem from="1625732680461" duration="5674000" />
+      <workItem from="1625794658672" duration="4024000" />
+      <workItem from="1626052316367" duration="56000" />
+      <workItem from="1626086865126" duration="3000" />
+      <workItem from="1626164740740" duration="804000" />
+      <workItem from="1626257215179" duration="812000" />
+      <workItem from="1626414305865" duration="5340000" />
+      <workItem from="1626766615482" duration="1019000" />
+      <workItem from="1626834480985" duration="3268000" />
+      <workItem from="1627003062341" duration="2239000" />
+      <workItem from="1627627552061" duration="7000" />
+      <workItem from="1627894882850" duration="678000" />
+      <workItem from="1627977015273" duration="549000" />
+      <workItem from="1627979141533" duration="2000" />
+      <workItem from="1627979884700" duration="679000" />
+      <workItem from="1628141254944" duration="1642000" />
+      <workItem from="1628148813992" duration="3512000" />
+      <workItem from="1628579284474" duration="654000" />
+      <workItem from="1628645773255" duration="677000" />
+      <workItem from="1628649595550" duration="8707000" />
+      <workItem from="1629103868885" duration="280000" />
+      <workItem from="1629105834840" duration="4106000" />
+      <workItem from="1629162217752" duration="612000" />
+      <workItem from="1629168494264" duration="4368000" />
+      <workItem from="1629204128904" duration="3681000" />
+      <workItem from="1629248232316" duration="10536000" />
+      <workItem from="1629277546729" duration="1892000" />
+      <workItem from="1629708066271" duration="2654000" />
+      <workItem from="1629712324768" duration="613000" />
+      <workItem from="1629766453627" duration="67000" />
+      <workItem from="1629791195453" duration="708000" />
+      <workItem from="1629869757314" duration="109000" />
+      <workItem from="1629972430567" duration="328000" />
+      <workItem from="1630033054968" duration="1038000" />
+      <workItem from="1630048902323" duration="1265000" />
+      <workItem from="1630284855468" duration="1178000" />
+      <workItem from="1630310772014" duration="2804000" />
+      <workItem from="1630371850959" duration="778000" />
+      <workItem from="1630376962404" duration="703000" />
+      <workItem from="1630485534995" duration="1061000" />
+      <workItem from="1630488712577" duration="66000" />
+      <workItem from="1630571608800" duration="631000" />
+      <workItem from="1630647799289" duration="63000" />
+      <workItem from="1630906169738" duration="5704000" />
+      <workItem from="1630991725635" duration="967000" />
+      <workItem from="1631078723418" duration="858000" />
+      <workItem from="1631082616869" duration="5000" />
+      <workItem from="1631168561021" duration="822000" />
+      <workItem from="1631177045253" duration="4000" />
+      <workItem from="1631180717809" duration="709000" />
+      <workItem from="1631182502406" duration="824000" />
+      <workItem from="1631260009825" duration="1784000" />
+      <workItem from="1631261803964" duration="415000" />
+      <workItem from="1631262950556" duration="3798000" />
+      <workItem from="1631327390156" duration="15000" />
+      <workItem from="1631499193261" duration="1507000" />
+      <workItem from="1631518472316" duration="1458000" />
+      <workItem from="1631523873728" duration="819000" />
+      <workItem from="1634796927873" duration="2136000" />
+      <workItem from="1634809295580" duration="295000" />
+      <workItem from="1634866405965" duration="797000" />
+      <workItem from="1634867234301" duration="1669000" />
+      <workItem from="1634892578635" duration="438000" />
+      <workItem from="1635230314411" duration="7875000" />
+      <workItem from="1635931702841" duration="127000" />
+      <workItem from="1636095025618" duration="668000" />
+      <workItem from="1636101381315" duration="826000" />
+      <workItem from="1636461475030" duration="4000" />
+      <workItem from="1636699144076" duration="804000" />
+      <workItem from="1637051217322" duration="46000" />
+      <workItem from="1637221705657" duration="39000" />
+      <workItem from="1637303963967" duration="1381000" />
+      <workItem from="1637645393391" duration="556000" />
+      <workItem from="1637657137596" duration="27000" />
+      <workItem from="1637732588122" duration="50000" />
+      <workItem from="1637819568993" duration="1515000" />
+      <workItem from="1639984228691" duration="75000" />
+      <workItem from="1640841088828" duration="1473000" />
+      <workItem from="1640842878720" duration="1887000" />
+      <workItem from="1640853363025" duration="1722000" />
+      <workItem from="1641363480854" duration="574000" />
+      <workItem from="1641364142624" duration="801000" />
+      <workItem from="1641777496908" duration="118000" />
+      <workItem from="1641783059241" duration="304000" />
+      <workItem from="1641796581484" duration="595000" />
+      <workItem from="1641805444586" duration="550000" />
+      <workItem from="1641867303243" duration="693000" />
+      <workItem from="1641881499522" duration="4665000" />
+      <workItem from="1641955519103" duration="3848000" />
+      <workItem from="1642055911573" duration="2553000" />
+      <workItem from="1642064783524" duration="594000" />
+      <workItem from="1642122486183" duration="404000" />
+      <workItem from="1642123177621" duration="1465000" />
+      <workItem from="1642129495660" duration="4298000" />
+      <workItem from="1642141028628" duration="2035000" />
+      <workItem from="1642147599959" duration="62000" />
+      <workItem from="1642151717369" duration="1275000" />
+      <workItem from="1642658046377" duration="1179000" />
+      <workItem from="1642663270710" duration="2992000" />
+      <workItem from="1642749503117" duration="997000" />
+      <workItem from="1642822954475" duration="3430000" />
+      <workItem from="1642992023825" duration="903000" />
+      <workItem from="1643005213294" duration="4971000" />
+      <workItem from="1643079464491" duration="6931000" />
+      <workItem from="1644197175903" duration="1042000" />
+      <workItem from="1644301724010" duration="226000" />
+      <workItem from="1644889092898" duration="624000" />
+      <workItem from="1644919577560" duration="722000" />
+      <workItem from="1644973783813" duration="803000" />
+      <workItem from="1644989481439" duration="1205000" />
+      <workItem from="1644992844658" duration="1483000" />
+      <workItem from="1645061866981" duration="757000" />
+      <workItem from="1645076318918" duration="1320000" />
+      <workItem from="1645146674596" duration="12256000" />
+      <workItem from="1645173200002" duration="820000" />
+      <workItem from="1645406301085" duration="1233000" />
+      <workItem from="1645409659255" duration="25000" />
+      <workItem from="1645412960341" duration="2148000" />
+      <workItem from="1645422668477" duration="3719000" />
+      <workItem from="1645435870941" duration="707000" />
+      <workItem from="1645491644757" duration="3219000" />
+      <workItem from="1645509159623" duration="3577000" />
+      <workItem from="1645517480012" duration="248000" />
+      <workItem from="1645598080848" duration="824000" />
+      <workItem from="1645665673638" duration="44000" />
+      <workItem from="1645665727415" duration="8790000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1606380092960</created>
@@ -274,7 +539,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
@@ -316,12 +581,13 @@
         </entry>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="SHOW_DIRTY_RECURSIVELY" value="true" />
@@ -332,12 +598,12 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$PROJECT_DIR$/../../java/localRepository/org/gitlab4j/gitlab4j-api/4.15.3/gitlab4j-api-4.15.3.jar!/org/gitlab4j/api/GroupApi.class</url>
+          <url>jar://D:/java/localRepository/org/gitlab4j/gitlab4j-api/4.15.3/gitlab4j-api-4.15.3.jar!/org/gitlab4j/api/GroupApi.class</url>
           <line>192</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$PROJECT_DIR$/../../java/localRepository/org/gitlab4j/gitlab4j-api/4.15.3/gitlab4j-api-4.15.3.jar!/org/gitlab4j/api/UserApi.class</url>
+          <url>jar://D:/java/localRepository/org/gitlab4j/gitlab4j-api/4.15.3/gitlab4j-api-4.15.3.jar!/org/gitlab4j/api/UserApi.class</url>
           <line>372</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
@@ -346,12 +612,89 @@
           <line>16</line>
           <option name="timeStamp" value="30" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://D:/java/localRepository/org/gitlab4j/gitlab4j-api/4.15.7/gitlab4j-api-4.15.7.jar!/org/gitlab4j/api/ProjectApi.class</url>
+          <line>618</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/test/thread/TestJoin.java</url>
+          <line>84</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/test/test/JSonTransfer.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/test/excel/TestExcelOutput.java</url>
+          <line>82</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/test/test/TestJson.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/test/git/TestGit.java</url>
+          <line>171</line>
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/test/jfrog/JfrogTest2.java</url>
+          <line>156</line>
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/test/algorithm/Lru.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/test/git/TestGit.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="72" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/test/algorithm/TreeSearch.java</url>
+          <line>79</line>
+          <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/test/algorithm/DynamicProgramming.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="81" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/test/jfrog/JfrogTest2.java</url>
+          <line>197</line>
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/test/jfrog/JfrogTest2.java</url>
+          <line>540</line>
+          <option name="timeStamp" value="92" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/test/jfrog/JfrogTest2.java</url>
+          <line>91</line>
+          <option name="timeStamp" value="93" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/mytest$TestDate.ic" NAME="TestDate Coverage Results" MODIFIED="1610674367009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>test.testdate.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/mytest$TestStrig.ic" NAME="TestStrig Coverage Results" MODIFIED="1641867844138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>test.test.*</FILTER>
     </SUITE>
   </component>
   <component name="masterDetails">

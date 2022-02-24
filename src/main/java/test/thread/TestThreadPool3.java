@@ -20,7 +20,7 @@ public class TestThreadPool3 {
 
 			System.out.println("线程1" + Thread.currentThread().getName());
 			//throw new RuntimeException("手动抛出异常");d
-			//float a = 1/0;
+			float a = 1/0;
 			System.out.println(Thread.currentThread().getId());
 			
 		});
@@ -34,6 +34,6 @@ public class TestThreadPool3 {
 			System.out.println("线程3" + Thread.currentThread().getName());
 			System.out.println(Thread.currentThread().getId());
 		});
-		// executor.shutdown();
+		executor.shutdown();
 	}
 }

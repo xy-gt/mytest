@@ -5,7 +5,7 @@ import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 
 /**
- * ²âÊÔjava ½Å±¾
+ * æµ‹è¯•java è„šæœ¬
  * @author soonsmile
  *
  */

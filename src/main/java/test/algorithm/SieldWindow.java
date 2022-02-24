@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
+ * 滑动窗口算法 判断最大不重复字符串
  * @Author xiongyong
  * @Date 2021/2/25
  */
@@ -11,7 +12,7 @@ import java.util.Set;
 public class SieldWindow {
 
     public static void main(String[] args) {
-        int i = lengthOfLongestSubstring("abcdefgtkabihl");
+        int i = lengthOfLongestSubstring("abcdefghijklmnabcdefghijklmn");
         System.out.println(i);
     }
     //滑动窗口算法

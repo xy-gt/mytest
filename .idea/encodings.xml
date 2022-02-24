@@ -1,8 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/src/main/java/test/map/TestConcurrentHashMap.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/java/test/park/TestPackAndUnpack.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/test/algorithm/DynamicProgramming.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/test/algorithm/TreeSearch.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/test/excel/TestExcelOutput.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/test/file/FileZip.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/test/file/TestBigFile.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/test/file/TestFile2.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/test/file/TestFile3.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/test/jfrog/JfrogTest2.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/test/jfrog/Model/AqlArtifactWrapDTO.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/test/jfrog/Model/ArtifactRestDTO.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/test/jfrog/Model/ArtifactStorageDTO.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/test/jfrog/Model/JfrogGroup.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/test/jfrog/XrayTest.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/test/park/TestPackAndUnpack.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/test/runtime/TestRuntime.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/test/script/TestScript.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/test/socket/ClientSocket.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/test/socket/ServiceSocket.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/test/test/TestJson.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/test/thread/TestJoin.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/test/unit/FileSizeConverUtil.java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

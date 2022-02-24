@@ -1,5 +1,7 @@
 package test.runtime;
 
+import cn.hutool.core.util.RuntimeUtil;
+
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -14,7 +16,7 @@ public class TestRuntime {
     public static void main(String[] args)  {
         //Java 执行shell 命令
         while (true) {
-            System.out.println("请输入命令：");
+            System.out.println("输入命令:");
             Scanner sc = new Scanner(System.in);
             String command = sc.nextLine();
             if ("exit".equals(command)) {
@@ -27,7 +29,7 @@ public class TestRuntime {
                     return;
                 }
                 // mvn 打包 cmd /c   cd D:\ideaworkspace\mytest && mvn clean package
-                process = Runtime.getRuntime().exec(command);
+                process = RuntimeUtil.exec(command);//Runtime.getRuntime().exec(command);
 
                 InputStream  in = process.getInputStream();
                 BufferedReader read = new BufferedReader(new InputStreamReader(in));
@@ -40,7 +42,7 @@ public class TestRuntime {
                 e.printStackTrace();
             }
         }
-
+        System.out.println("----------end----------------");
 
     }
 

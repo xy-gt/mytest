@@ -10,15 +10,15 @@ import java.util.concurrent.*;
  * @Date: 2019/7/5 13:59
  */
 public  class Test {
-    public static void main1(String[] args) {
+    public static void main(String[] args) {
         ScheduledExecutorService executorService = Executors.newScheduledThreadPool(1);
             executorService.scheduleAtFixedRate(() -> {
                     System.out.println("sssssssssssss");
-                try {
+            /*    try {
                     Thread.sleep(10000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
-                }
+                }*/
             },1, 5,TimeUnit.SECONDS);
         }
     /********************************************************************************************************/
@@ -35,7 +35,7 @@ public  class Test {
          System.out.println(queue.size());
      }
     /********************************************************************************************************/
-    public static void main(String[] args) {
+    public static void main3(String[] args) {
         byte a = -112;
         byte b = 87;
         System.out.println("a&b:"+( a & 0xff));

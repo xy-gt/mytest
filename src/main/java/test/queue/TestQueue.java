@@ -6,6 +6,7 @@ import sun.rmi.runtime.RuntimeUtil;
 import java.util.*;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.LinkedBlockingQueue;
 
 /**
  * 1亿数据取前1000个
@@ -48,5 +49,12 @@ public class TestQueue {
         }
         Collections.sort(res);
         System.out.println(res);
+
+
+        LinkedBlockingQueue queue =   new LinkedBlockingQueue();
+        queue.offer(1);
+        queue.poll();
+
+
     }
 }
