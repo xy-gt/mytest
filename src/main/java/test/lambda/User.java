@@ -34,6 +34,11 @@ public class User {
 		this.name = name;
 		this.age = age;
 	}
+	public User(String id, String name) {
+		super();
+		this.id = id;
+		this.name = name;
+	}
 	@Override
 	public String toString() {
 		return "User [id=" + id + ", name=" + name + ", age=" + age + "]";

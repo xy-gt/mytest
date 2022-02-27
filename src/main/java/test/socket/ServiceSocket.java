@@ -10,7 +10,7 @@ public class ServiceSocket {
     public static void main(String[] args) {
 
         try {
-            System.out.println("·şÎñÆ÷Æô¶¯");
+            System.out.println("æœåŠ¡å™¨å¯åŠ¨");
             ServerSocket serverSocket = new ServerSocket(22222);
 
             while (true) {

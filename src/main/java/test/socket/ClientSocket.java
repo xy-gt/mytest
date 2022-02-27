@@ -11,7 +11,7 @@ public class ClientSocket {
         try {
             Socket socket = new Socket("127.0.0.1",22222);
 
-            System.out.println("ÇëÊäÈë--------");
+            System.out.println("è¯·è¾“å…¥--------");
             Scanner scanner = new Scanner(System.in);
 
             while (true) {
@@ -19,7 +19,7 @@ public class ClientSocket {
                 OutputStream outputStream = socket.getOutputStream();
                 outputStream.write(ins.getBytes());
                 outputStream.flush();
-                System.out.println("·¢ËÍÍê³É");
+                System.out.println("å‘é€å®Œæˆ");
             }
 
         } catch (IOException e) {

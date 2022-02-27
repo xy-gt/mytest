@@ -1,13 +1,19 @@
 package test.lambda;
 
+import cn.hutool.core.util.StrUtil;
+import com.google.common.collect.Lists;
+
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentSkipListSet;
+import java.util.concurrent.locks.ReentrantLock;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Test1 {
 
 	public static void main(String[] args) {
-		
 		List<User> list = Arrays.asList(
 				new User("1","是",10),
 				new User("2","否",30),
@@ -73,8 +79,7 @@ public class Test1 {
 	    Integer aa = null;
 	    int a = Optional.ofNullable(aa).orElse(1)-1;
 	    System.out.println("a:"+a);
-	    
-		
+
 	    System.err.println("-------------------orelse2--------------------");
 	    String aa2 = "";
 	    String aaaa2 = Optional.ofNullable(aa2).orElse("1");
@@ -85,8 +90,33 @@ public class Test1 {
 	    List l = list.stream().limit(2).collect(Collectors.toList());
 	    System.out.println(l);
 	   System.out.println("group:"+list.stream().collect(Collectors.groupingBy(User::getName)));
-	    
-      	    
+
+
+		ArrayList<User> users = Lists.newArrayList(new User("1", "是", 10),
+				new User("2", "否",20),
+				new User("3", "否",null),
+				new User("4", "是", 34),
+				new User("5", "否",11),
+				new User("6", "是", 29));
+
+
+		// 会空指针异常
+		/*List<User> collect = users.stream().filter(p -> p.getAge() == 20).collect(Collectors.toList());
+		System.out.println(collect);
+*/
+
+		Map<Integer, Long> collect = users.stream().filter(p -> p.getAge() != null).collect(Collectors.groupingBy(User::getAge, Collectors.counting()));
+		System.out.println(collect);
+
+		Stream<User> sorted = users.stream().sorted(Comparator.comparing(User::getAge,Comparator.nullsFirst(Comparator.naturalOrder())));
+		List<User> collect1 = sorted.collect(Collectors.toList());
+
+		System.out.println(collect1);
+
+
+		ArrayList<String> strings = Lists.newArrayList("a/b/c", "1/a/f");
+		String collect2 = strings.stream().collect(Collectors.joining("/"));
+
 	}
 
 }
